@@ -1,0 +1,2 @@
+1.ChineseSimplified.isl为中文包，安装innosetup后，将此文件放在安装目录的Languages目录下即可；
+2.SetupLdr.e32为获取管理员权限文件，直接覆盖到安装目录即可。
