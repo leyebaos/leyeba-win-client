@@ -1,0 +1,361 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C7F45B82-8AE4-4165-A442-9B36AB3EC64B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ControlEx</RootNamespace>
+    <AssemblyName>ControlEx</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\build\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\build\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\build\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>..\build\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>none</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseSubForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseSubForm.Designer.cs">
+      <DependentUpon>BaseSubForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ButtonBase.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ButtonIcon.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CheckBoxBase.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ComboBoxBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ComboBoxBase.Designer.cs">
+      <DependentUpon>ComboBoxBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ComboBoxProject.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ComboBoxProject.Designer.cs">
+      <DependentUpon>ComboBoxProject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ComboBoxUserName.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ComboBoxUserName.Designer.cs">
+      <DependentUpon>ComboBoxUserName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContextMenuBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ContextMenuBase.Designer.cs">
+      <DependentUpon>ContextMenuBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContextMenuItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ListBoxBase.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ListViewEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LoginingControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MainTabControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainTabControl.Designer.cs">
+      <DependentUpon>MainTabControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopupBox.cs" />
+    <Compile Include="PopupControlHost.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ProgressBarBase.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PromptBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PromptBox.Designer.cs">
+      <DependentUpon>PromptBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RichTextBoxBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RichTextBoxBase.Designer.cs">
+      <DependentUpon>RichTextBoxBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RichTextBoxEx.cs" />
+    <Compile Include="TextBoxBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TextBoxBase.Designer.cs">
+      <DependentUpon>TextBoxBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TextBoxNumber.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TextBoxPassword.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TextBoxPassword.Designer.cs">
+      <DependentUpon>TextBoxPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TextBoxTime.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TextBoxTime.Designer.cs">
+      <DependentUpon>TextBoxTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TimerControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TitleControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BaseSubForm.resx">
+      <DependentUpon>BaseSubForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComboBoxBase.resx">
+      <DependentUpon>ComboBoxBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComboBoxProject.resx">
+      <DependentUpon>ComboBoxProject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComboBoxUserName.resx">
+      <DependentUpon>ComboBoxUserName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContextMenuBase.resx">
+      <DependentUpon>ContextMenuBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainTabControl.resx">
+      <DependentUpon>MainTabControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PromptBox.resx">
+      <DependentUpon>PromptBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RichTextBoxBase.resx">
+      <DependentUpon>RichTextBoxBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TextBoxBase.resx">
+      <DependentUpon>TextBoxBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TextBoxPassword.resx">
+      <DependentUpon>TextBoxPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TextBoxTime.resx">
+      <DependentUpon>TextBoxTime.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inputpassword_hot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inputpassword_nor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_blue_bg_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_blue_bg_hot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_blue_bg_nor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_on_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_suspend.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu1_nor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu1_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\choose_checked_login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\choose_nor_login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn01_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn01_press.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inputid_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inputid_hot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inputid_nor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\popupbox_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prompt_info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prompt_qustion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_close_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_close_hot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_close_nor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_gray_bg_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_gray_bg_hot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_gray_bg_nor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Util\Util.csproj">
+      <Project>{91d6c12e-120d-481a-9479-be57915bc043}</Project>
+      <Name>Util</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\popupbox_topbg_right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\popupbox_bg_center.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\popupbox_footbg_center.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\popupbox_footbg_left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\popupbox_footbg_right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\popupbox_topbg_center.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\popupbox_topbg_left.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>if /I "$(ConfigurationName)" == "Release" Eazfuscator.NET.exe "$(TargetPath)" --msbuild-project-path "$(ProjectPath)" --msbuild-project-configuration "$(ConfigurationName)" --msbuild-project-platform "$(PlatformName)" --msbuild-solution-path "$(SolutionPath)" -n --newline-flush -v 3.3</PostBuildEvent>
+  </PropertyGroup>
+</Project>

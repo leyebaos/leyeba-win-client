@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<document>
+  <general>
+    <autolaunch>0</autolaunch>
+    <!--自动启动,0表示false，1表示自动启动-->
+    <autoupdate>1</autoupdate>
+    <!--自动升级，0表示flase，1表示true-->
+    <proxy enabled="false">
+      <!--是否启用代理-->
+      <host></host>
+      <!--服务器地址-->
+      <port></port>
+      <!--端口号-->
+      <usrname></usrname>
+      <!--用户名-->
+      <pwd></pwd>
+      <!--密码-->
+      <domain></domain>
+      <!--域-->
+    </proxy>
+  </general>
+</document>

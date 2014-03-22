@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<document>
+  <user id="" pwd="" default="false">
+    <autologin>0</autologin>    <!--自动登录,0表示false，1表示自动登录-->
+    <rememberpwd>0</rememberpwd><!--记住密码,0表示false，1表示记住密码-->
+    <exitprompt>0</exitprompt>  <!--关闭程序时，0表示退出，1表示提示-->
+    <float x="" y="" />         <!--记录上次退出程序时浮动窗口的坐标-->
+    <autoupdate>0</autoupdate>  <!--自动升级，0表示flase，1表示true-->
+    <dailyworkhour></dailyworkhour>  <!--约定日工时-->
+    <floatclick></floatclick>   <!--浮动窗体点击设置，0单击显示主界面，1表示双击显示主界面-->    
+  </user>
+  <general>
+    
+  </general>
+</document>

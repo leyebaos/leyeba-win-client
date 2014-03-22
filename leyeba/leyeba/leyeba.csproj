@@ -1,0 +1,352 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{96B29711-696E-4F36-8D95-22FAD0423916}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>leyeba</RootNamespace>
+    <AssemblyName>leyeba</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <PublishUrl>发布\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\build\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\build\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\build\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>..\build\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>none</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FormAddLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddLog.Designer.cs">
+      <DependentUpon>FormAddLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSystemSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSystemSetting.Designer.cs">
+      <DependentUpon>FormSystemSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KeyMouseHook.cs" />
+    <Compile Include="UserCtrlLog.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserCtrlLog.Designer.cs">
+      <DependentUpon>UserCtrlLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormFloat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFloat.Designer.cs">
+      <DependentUpon>FormFloat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLeyebaMsg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLeyebaMsg.Designer.cs">
+      <DependentUpon>FormLeyebaMsg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserCtrlUserSetting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserCtrlUserSetting.Designer.cs">
+      <DependentUpon>UserCtrlUserSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserCtrlTask.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserCtrlTask.Designer.cs">
+      <DependentUpon>UserCtrlTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormAddLog.resx">
+      <DependentUpon>FormAddLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSystemSetting.resx">
+      <DependentUpon>FormSystemSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserCtrlLog.resx">
+      <DependentUpon>UserCtrlLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFloat.resx">
+      <DependentUpon>FormFloat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLeyebaMsg.resx">
+      <DependentUpon>FormLeyebaMsg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserCtrlUserSetting.resx">
+      <DependentUpon>UserCtrlUserSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserCtrlTask.resx">
+      <DependentUpon>UserCtrlTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AutoUpdate\AutoUpdate.csproj">
+      <Project>{91c4a866-e900-4cdf-99d9-e52ddbd9304f}</Project>
+      <Name>AutoUpdate</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ControlEx\ControlEx.csproj">
+      <Project>{c7f45b82-8ae4-4165-a442-9b36ab3ec64b}</Project>
+      <Name>ControlEx</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Util\Util.csproj">
+      <Project>{91d6c12e-120d-481a-9479-be57915bc043}</Project>
+      <Name>Util</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="conf\SystemSetting.xml" />
+    <Content Include="conf\UserSetting.xml" />
+    <Content Include="logConfig.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="logo.ico" />
+    <None Include="Resources\reload.png" />
+    <None Include="Resources\zero.png" />
+    <None Include="Resources\two.png" />
+    <None Include="Resources\three.png" />
+    <None Include="Resources\six.png" />
+    <None Include="Resources\seven.png" />
+    <None Include="Resources\one.png" />
+    <None Include="Resources\nine.png" />
+    <None Include="Resources\four.png" />
+    <None Include="Resources\five.png" />
+    <None Include="Resources\eight.png" />
+    <None Include="Resources\colon.png" />
+    <None Include="Resources\qipao_pause.png" />
+    <None Include="Resources\loginbtn_cancle_hot.png" />
+    <None Include="Resources\loginbtn_cancle_press.png" />
+    <None Include="Resources\loginbtn_cancle_normal.png" />
+    <None Include="Resources\bubble_default.png" />
+    <None Include="Resources\inform_space.ico" />
+    <None Include="Resources\logoimage.png" />
+    <None Include="Resources\logo.ico" />
+    <None Include="Resources\inform.ico" />
+    <None Include="Resources\inform_icon01.png" />
+    <None Include="Resources\leftmenu_bg.png" />
+    <None Include="Resources\btn_main_back_nor.png" />
+    <None Include="Resources\btn_main_back_hot.png" />
+    <None Include="Resources\btn_main_back_down.png" />
+    <None Include="Resources\btn_main_max_hot.png" />
+    <None Include="Resources\btn_main_max_down.png" />
+    <None Include="Resources\btn_main_max_nor.png" />
+    <None Include="Resources\choose_down.png" />
+    <None Include="Resources\choose_nor01.png" />
+    <None Include="Resources\icon_add.png" />
+    <None Include="Resources\icon_submit.png" />
+    <None Include="Resources\inputid_nor.png" />
+    <None Include="Resources\inputid_hot.png" />
+    <None Include="Resources\inputid_down.png" />
+    <None Include="Resources\qipao_bg.png" />
+    <None Include="Resources\qipao_color.png" />
+    <None Include="Resources\icon_stop.png" />
+    <None Include="Resources\main_footbg_center.png" />
+    <None Include="Resources\main_topbg_center.png" />
+    <None Include="Resources\btn_gray_bg_nor.png" />
+    <None Include="Resources\btn_gray_bg_hot.png" />
+    <None Include="Resources\btn_gray_bg_down.png" />
+    <None Include="Resources\btn_blue_bg_nor.png" />
+    <None Include="Resources\btn_blue_bg_hot.png" />
+    <None Include="Resources\btn_blue_bg_down.png" />
+    <None Include="Resources\btn_main_close_nor.png" />
+    <None Include="Resources\btn_main_close_down.png" />
+    <None Include="Resources\icon_01.png" />
+    <None Include="Resources\icon_suspend.png" />
+    <None Include="Resources\progress-ball.png" />
+    <None Include="Resources\progress-ball_bg.png" />
+    <None Include="Resources\leftmenu_logo.png" />
+    <None Include="Resources\main_bg.png" />
+    <None Include="Resources\menu_on_bg.png" />
+    <None Include="Resources\menu3_on.png" />
+    <None Include="Resources\menu3_nor.png" />
+    <None Include="Resources\menu2_on.png" />
+    <None Include="Resources\menu2_nor.png" />
+    <None Include="Resources\menu1_on.png" />
+    <None Include="Resources\menu1_nor.png" />
+    <None Include="Resources\inputpassword_nor.png" />
+    <None Include="Resources\inputpassword_hot.png" />
+    <None Include="Resources\choose_checked_login.png" />
+    <None Include="Resources\choose_nor_login.png" />
+    <None Include="Resources\login_logo.png" />
+    <None Include="Resources\btn_mini_press.png" />
+    <None Include="Resources\btn_mini_normal.png" />
+    <None Include="Resources\btn_mini_down.png" />
+    <None Include="Resources\btn_close_nor.png" />
+    <None Include="Resources\btn_close_hot.png" />
+    <None Include="Resources\btn_close_down.png" />
+    <None Include="Resources\loginbtn_press.png" />
+    <None Include="Resources\loginbtn_normal.png" />
+    <None Include="Resources\loginbtn_hot.png.png" />
+    <None Include="Resources\login_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>if /I "$(ConfigurationName)" == "Release" Eazfuscator.NET.exe "$(TargetPath)" --msbuild-project-path "$(ProjectPath)" --msbuild-project-configuration "$(ConfigurationName)" --msbuild-project-platform "$(PlatformName)" --msbuild-solution-path "$(SolutionPath)" -n --newline-flush -v 3.3</PostBuildEvent>
+  </PropertyGroup>
+</Project>
